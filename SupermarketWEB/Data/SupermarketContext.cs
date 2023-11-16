@@ -6,11 +6,15 @@ namespace SupermarketWEB.Data
     public class SupermarketContext : DbContext
     {
         public SupermarketContext(DbContextOptions options) : base(options)
-        { 
+        {
         }
-        public DbSet<Product> Porducts { get; set; }
+
+        public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-		public object Provider { get; internal set; }
-		public object Products { get; internal set; }
-	}
+        public DbSet<Provider> Provider { get; set; }
+        public DbSet<PayMode> PayModes { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Sell> Sales { get; set; }
+        public DbSet<Purchase> Purchases { get; set; }
+    }
 }
